@@ -1,4 +1,4 @@
-nclude <stdio.h>
+#include <stdio.h>
 #include <arpa/inet.h>
 #include <netdb.h>
 #include <string.h>
@@ -29,7 +29,7 @@ int main(void) {
 	memset((char *)&sin, '\0', sizeof(sin));
 	sin.sin_family = AF_INET;
 	sin.sin_port = htons(PORTNUM);
-	sin.sin_addr.s_addr = inet_addr("127.0.0.1");
+	sin.sin_addr.s_addr = inet_addr(INADDR_ANY);
 	
 	if (bind(sd, (struct sockaddr *)&sin, sizeof(sin))) {
 		perror("bind");

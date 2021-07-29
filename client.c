@@ -1,10 +1,11 @@
-nclude <sys/types.h>
+#include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <netdb.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stdio.h>
 #define PORTNUM 3389
 struct SendPacket{
 	uint32_t type;
